@@ -10,8 +10,10 @@ const AppLayout = () => {
     <div>
       <Navbar variant='dark' expand='lg'>
         <Container fluid>
-          <Navbar.Brand href='#'>
-            <img width={90} src='image/heeflix-logo.png' />
+          <Navbar.Brand>
+            <Link to='/'>
+              <img width={90} src='image/heeflix-logo.png' />
+            </Link>
           </Navbar.Brand>
           <Navbar.Collapse id='navbarScroll'>
             <Nav
