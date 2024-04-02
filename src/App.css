@@ -1,0 +1,11 @@
+/* Bootstrap css */
+.navbar-dark {
+  --bs-navbar-color: #ffffff;
+}
+
+/* css */
+body {
+  background-color: #000000;
+  color: #ffffff;
+  font-family: 'Montserrat', sans-serif;
+}
