@@ -30,6 +30,7 @@
   z-index: 2;
 }
 .banner-text-area > h1 {
+  font-family: 'Rubik Scribble', system-ui;
   font-size: 3rem;
   font-weight: bold;
 }
