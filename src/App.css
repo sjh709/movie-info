@@ -19,6 +19,13 @@
   --bs-btn-disabled-color: var(--color-purple);
   --bs-btn-disabled-border-color: var(--color-purple);
 }
+.spinner-border {
+  --bs-spinner-width: 3rem;
+  --bs-spinner-height: 3rem;
+}
+.text-primary {
+  color: var(--color-purple) !important;
+}
 /* css */
 body {
   background-color: var(--color-black);

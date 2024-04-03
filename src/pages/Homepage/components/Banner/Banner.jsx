@@ -2,12 +2,17 @@ import React from 'react';
 import { usePopularMoviesQuery } from '../../../../hooks/usePopularMovies';
 import { Alert } from 'react-bootstrap';
 import './Banner.style.css';
+import Spinner from 'react-bootstrap/Spinner';
 
 const Banner = () => {
   const { data, isLoading, isError, error } = usePopularMoviesQuery();
   //   console.log('data', data);
   if (isLoading) {
-    return <h1>Loading...</h1>;
+    return (
+      <div className='spinner-area'>
+        <Spinner animation='border' variant='primary' />
+      </div>
+    );
   }
   if (isError) {
     return <Alert variant='danger'>{error.message}</Alert>;
