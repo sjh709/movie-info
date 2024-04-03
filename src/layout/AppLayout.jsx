@@ -35,7 +35,7 @@ const AppLayout = () => {
                 className='me-2'
                 aria-label='Search'
               />
-              <Button variant='outline-danger'>
+              <Button variant='outline-primary'>
                 <FontAwesomeIcon icon={faMagnifyingGlass} />
               </Button>
             </Form>
