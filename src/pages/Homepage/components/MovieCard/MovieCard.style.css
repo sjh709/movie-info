@@ -1,0 +1,42 @@
+.movie-card {
+  width: 100%;
+  height: 200px;
+  background-size: cover;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.overlay {
+  width: 100%;
+  height: 100%;
+  background: rgba(43, 41, 41, 0.9);
+  opacity: 0;
+  transition: all 1s;
+  color: var(--color-white);
+  overflow-wrap: break-word;
+  padding: 10px;
+  position: relative;
+}
+.overlay:hover {
+  opacity: 1;
+  border-radius: 10px;
+}
+.movie-card:hover {
+  transform: scale(1.2) translateZ(20px);
+  z-index: 2;
+  border-radius: 10px;
+}
+.overlay-title {
+  font-weight: 600;
+}
+.overlay-info {
+  margin-top: 10px;
+  position: absolute;
+  bottom: 10px;
+}
+.overlay-info > * {
+  margin-right: 10px;
+}
+.adult {
+  color: var(--color-crimson);
+  font-style: italic;
+}
