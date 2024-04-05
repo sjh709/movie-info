@@ -4,9 +4,20 @@ import './MovieCard.style.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUsers } from '@fortawesome/free-solid-svg-icons';
 import { faImdb } from '@fortawesome/free-brands-svg-icons';
+import { useMovieGenreQuery } from '../../hooks/useMovieGenre';
 
 const MovieCard = ({ movie }) => {
-  // console.log('movie', movie);
+  const { data: genreData } = useMovieGenreQuery();
+
+  const showGenre = (genreIdList) => {
+    if (!genreData) return [];
+    const genreNameList = genreIdList.map((id) => {
+      const genreObj = genreData.find((genre) => genre.id === id);
+      return genreObj.name;
+    });
+    return genreNameList;
+  };
+
   return (
     <div
       style={{
@@ -19,7 +30,7 @@ const MovieCard = ({ movie }) => {
     >
       <div className='overlay'>
         <h3 className='overlay-title'>{movie.title}</h3>
-        {movie.genre_ids.map((id, index) => (
+        {showGenre(movie.genre_ids).map((id, index) => (
           <Badge bg='primary' key={index}>
             {id}
           </Badge>
