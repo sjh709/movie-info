@@ -1,7 +1,7 @@
 import React from 'react';
 import { usePopularMoviesQuery } from '../../../../hooks/usePopularMovies';
 import { Alert } from 'react-bootstrap';
-import LoadingSpinner from '../LoadingSpinner/LoadingSpinner';
+import LoadingSpinner from '../../../../common/LoadingSpinner/LoadingSpinner';
 import './Banner.style.css';
 
 const Banner = () => {

@@ -2,9 +2,9 @@
   overflow: hidden;
   height: 250px;
 }
-.popular-movie-area {
+.movie-slide-area {
   margin-top: 2rem;
 }
-.popular-movie-area > h3 {
+.movie-slide-area > h3 {
   margin-left: 15px;
 }

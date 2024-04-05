@@ -6,7 +6,7 @@ import { faUsers } from '@fortawesome/free-solid-svg-icons';
 import { faImdb } from '@fortawesome/free-brands-svg-icons';
 
 const MovieCard = ({ movie }) => {
-  console.log('movie', movie);
+  // console.log('movie', movie);
   return (
     <div
       style={{
@@ -19,8 +19,10 @@ const MovieCard = ({ movie }) => {
     >
       <div className='overlay'>
         <h3 className='overlay-title'>{movie.title}</h3>
-        {movie.genre_ids.map((id) => (
-          <Badge bg='primary'>{id}</Badge>
+        {movie.genre_ids.map((id, index) => (
+          <Badge bg='primary' key={index}>
+            {id}
+          </Badge>
         ))}
         <div className='overlay-info'>
           <FontAwesomeIcon
