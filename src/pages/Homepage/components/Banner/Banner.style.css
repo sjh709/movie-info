@@ -24,7 +24,7 @@
   z-index: 2;
 }
 .banner-text-area > h1 {
-  font-family: 'Rubik Scribble', system-ui;
+  font-family: 'Acme', 'Montserrat', sans-serif;
   font-size: 3.3rem;
   font-weight: bold;
 }
@@ -35,4 +35,28 @@
   display: -webkit-box;
   -webkit-line-clamp: 7;
   -webkit-box-orient: vertical;
+}
+/* 태블릿 */
+@media (max-width: 768px) {
+  .banner-text-area {
+    width: 60%;
+  }
+  .banner-text-area > h1 {
+    font-size: 3rem;
+  }
+  .banner-text-area > p {
+    -webkit-line-clamp: 5;
+  }
+}
+/* 모바일 */
+@media (max-width: 430px) {
+  .banner-text-area {
+    width: 70%;
+  }
+  .banner-text-area > h1 {
+    font-size: 2rem;
+  }
+  .banner-text-area > p {
+    -webkit-line-clamp: 3;
+  }
 }
