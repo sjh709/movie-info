@@ -7,6 +7,7 @@
   --color-yellow: #ffd43b;
   --color-light-slate-gray: #778899;
   --color-crimson: #dc143c;
+  --color-gray: #8c8c8c;
 }
 /* Bootstrap css */
 .navbar-dark {
@@ -34,6 +35,15 @@
 }
 .badge {
   margin-right: 5px;
+}
+.navbar-toggler {
+  border-color: var(--color-gray);
+}
+.navbar-toggler-icon {
+  filter: drop-shadow(0 0 0 var(--color-white));
+}
+.nav-link {
+  text-align: center;
 }
 /* css */
 body {

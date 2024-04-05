@@ -8,13 +8,14 @@ import { Link } from 'react-router-dom';
 const AppLayout = () => {
   return (
     <div>
-      <Navbar variant='dark' expand='lg'>
+      <Navbar variant='dark' expand='md'>
         <Container fluid>
           <Navbar.Brand>
             <Link to='/'>
               <img width={90} src='image/heeflix-logo.png' />
             </Link>
           </Navbar.Brand>
+          <Navbar.Toggle />
           <Navbar.Collapse id='navbarScroll'>
             <Nav
               className='me-auto my-2 my-lg-0'
