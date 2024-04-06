@@ -1,19 +1,28 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useSearchMovieQuery } from '../../hooks/useSearchMovie';
 import { useSearchParams } from 'react-router-dom';
 import LoadingSpinner from '../../common/LoadingSpinner/LoadingSpinner';
 import { Alert, Container, Row, Col } from 'react-bootstrap';
 import MovieDetailCard from '../MovieDetail/components/MovieDetailCard/MovieDetailCard';
+import ReactPaginate from 'react-paginate';
 
 // 경로
 // 1. nav바에서 클릭해서 온 경우 => popularMovie 보여줌
 // 2. 키워드 입력해서 온 경우 => 키워드와 관련된 영화들을 보여줌
 const MoviePage = () => {
   const [query, setQuery] = useSearchParams();
+  const [page, setPage] = useState(1);
   const keyword = query.get('q');
 
-  const { data, isLoading, isError, error } = useSearchMovieQuery({ keyword });
-  // console.log(data);
+  const { data, isLoading, isError, error } = useSearchMovieQuery({
+    keyword,
+    page,
+  });
+
+  const handlePageClick = ({ selected }) => {
+    setPage(selected + 1);
+  };
+
   if (isLoading) {
     return <LoadingSpinner />;
   }
@@ -35,6 +44,27 @@ const MoviePage = () => {
               </Col>
             ))}
           </Row>
+          <ReactPaginate
+            nextLabel='next >'
+            onPageChange={handlePageClick}
+            pageRangeDisplayed={3}
+            marginPagesDisplayed={2}
+            pageCount={data?.total_pages}
+            previousLabel='< previous'
+            pageClassName='page-item'
+            pageLinkClassName='page-link'
+            previousClassName='page-item'
+            previousLinkClassName='page-link'
+            nextClassName='page-item'
+            nextLinkClassName='page-link'
+            breakLabel='...'
+            breakClassName='page-item'
+            breakLinkClassName='page-link'
+            containerClassName='pagination'
+            activeClassName='active'
+            renderOnZeroPageCount={null}
+            forcePage={page - 1}
+          />
         </Col>
       </Row>
     </Container>

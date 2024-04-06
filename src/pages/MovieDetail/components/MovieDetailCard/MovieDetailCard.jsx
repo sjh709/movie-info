@@ -7,7 +7,6 @@ import { faImdb } from '@fortawesome/free-brands-svg-icons';
 import { useMovieGenreQuery } from '../../../../hooks/useMovieGenre';
 
 const MovieDetailCard = ({ movie }) => {
-  console.log(movie);
   const { data: genreData } = useMovieGenreQuery();
 
   const showGenre = (genreIdList) => {

@@ -59,7 +59,7 @@
   word-wrap: break-word; /* 단어 단위로 줄바꿈 */
   text-align: left;
   display: -webkit-box; /* 유연하게 height를 증감시킬 수 있는 플렉스박스 형태로 전환 */
-  -webkit-line-clamp: 8; /* 보여줄 줄 수 */
+  -webkit-line-clamp: 5; /* 보여줄 줄 수 */
   -webkit-box-orient: vertical; /* 플렉스 박스의 방향 설정(가로) */
   font-size: 1.1rem;
 }
