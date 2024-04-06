@@ -45,12 +45,12 @@ const MoviePage = () => {
             ))}
           </Row>
           <ReactPaginate
-            nextLabel='next >'
+            nextLabel='>'
             onPageChange={handlePageClick}
-            pageRangeDisplayed={3}
+            pageRangeDisplayed={2}
             marginPagesDisplayed={2}
-            pageCount={data?.total_pages}
-            previousLabel='< previous'
+            pageCount={data?.total_pages > 500 ? 500 : data.total_pages}
+            previousLabel='<'
             pageClassName='page-item'
             pageLinkClassName='page-link'
             previousClassName='page-item'
@@ -60,7 +60,7 @@ const MoviePage = () => {
             breakLabel='...'
             breakClassName='page-item'
             breakLinkClassName='page-link'
-            containerClassName='pagination'
+            containerClassName='pagination justify-content-center mb-5'
             activeClassName='active'
             renderOnZeroPageCount={null}
             forcePage={page - 1}

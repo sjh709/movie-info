@@ -46,6 +46,18 @@
 .nav-link {
   text-align: center;
 }
+.pagination {
+  --bs-pagination-bg: var(--color-black);
+  --bs-pagination-border-color: var(--color-purple);
+  --bs-pagination-color: var(--color-white);
+  --bs-pagination-hover-color: var(--color-purple);
+  --bs-pagination-focus-color: var(--color-purple);
+  --bs-pagination-active-bg: var(--color-purple);
+  --bs-pagination-active-border-color: var(--color-purple);
+  --bs-pagination-disabled-bg: var(--color-black);
+  --bs-pagination-disabled-border-color: var(--color-purple);
+  --bs-pagination-disabled-color: var(--color-white);
+}
 /* css */
 body {
   background-color: var(--color-black);
