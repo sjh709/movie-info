@@ -8,6 +8,7 @@
   --color-light-slate-gray: #778899;
   --color-crimson: #dc143c;
   --color-gray: #8c8c8c;
+  --color-light-cobalt-blue: #8db5e3;
 }
 /* Bootstrap css */
 .navbar-dark {
@@ -50,4 +51,12 @@ body {
   background-color: var(--color-black);
   color: var(--color-white);
   font-family: 'Montserrat', sans-serif;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+li {
+  padding: 0;
 }
