@@ -6,7 +6,7 @@ import './Banner.style.css';
 
 const Banner = () => {
   const { data, isLoading, isError, error } = usePopularMoviesQuery();
-  //   console.log('data', data);
+  // console.log('data', data);
   if (isLoading) {
     return <LoadingSpinner />;
   }
@@ -19,7 +19,7 @@ const Banner = () => {
       style={{
         backgroundImage:
           'url(' +
-          `https://media.themoviedb.org/t/p/w1920_and_h800_multi_faces${data.results[0].poster_path}` +
+          `https://media.themoviedb.org/t/p/w1920_and_h800_multi_faces${data.results[0].backdrop_path}` +
           ')',
       }}
       className='banner'
