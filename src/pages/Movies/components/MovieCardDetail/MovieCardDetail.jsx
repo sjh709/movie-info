@@ -1,12 +1,12 @@
 import React from 'react';
-import './MovieDetailCard.style.css';
+import './MovieCardDetail.style.css';
 import { Badge } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUsers } from '@fortawesome/free-solid-svg-icons';
 import { faImdb } from '@fortawesome/free-brands-svg-icons';
 import { useMovieGenreQuery } from '../../../../hooks/useMovieGenre';
 
-const MovieDetailCard = ({ movie }) => {
+const MovieCardDetail = ({ movie }) => {
   const { data: genreData } = useMovieGenreQuery();
 
   const showGenre = (genreIdList) => {
@@ -77,4 +77,4 @@ const MovieDetailCard = ({ movie }) => {
   );
 };
 
-export default MovieDetailCard;
+export default MovieCardDetail;

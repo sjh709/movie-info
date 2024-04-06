@@ -3,7 +3,7 @@ import { useSearchMovieQuery } from '../../hooks/useSearchMovie';
 import { useSearchParams } from 'react-router-dom';
 import LoadingSpinner from '../../common/LoadingSpinner/LoadingSpinner';
 import { Alert, Container, Row, Col } from 'react-bootstrap';
-import MovieDetailCard from '../MovieDetail/components/MovieDetailCard/MovieDetailCard';
+import MovieCardDetail from './components/MovieCardDetail/MovieCardDetail';
 import ReactPaginate from 'react-paginate';
 
 // 경로
@@ -40,7 +40,7 @@ const MoviePage = () => {
           <Row>
             {data?.results.map((movie, index) => (
               <Col key={index} lg={6} xs={12}>
-                <MovieDetailCard movie={movie} />
+                <MovieCardDetail movie={movie} />
               </Col>
             ))}
           </Row>
