@@ -1,0 +1,20 @@
+.review-text-box {
+  margin-bottom: 0;
+}
+.review-text-box.fold {
+  max-height: 100px;
+  overflow: hidden;
+}
+.review-text-box.expanded {
+  max-height: none;
+}
+.more-button {
+  background: none;
+  color: var(--color-white);
+  margin: 1rem 0;
+  text-decoration: underline;
+  padding: 0;
+}
+.review-author {
+  font-weight: 700;
+}

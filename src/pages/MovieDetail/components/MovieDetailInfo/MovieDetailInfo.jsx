@@ -4,7 +4,7 @@ import { Row, Col, Badge } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFilm } from '@fortawesome/free-solid-svg-icons';
 import MovieSocial from '../../../../common/MovieSocial/MovieSocial';
-import Line from './Line/Line';
+import Line from '../Line/Line';
 
 const MovieDetailInfo = ({ movie }) => {
   const priceToString = (price) => {

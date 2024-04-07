@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './MovieDetailMoreInfo.style.css';
-import ReviewBox from './ReviewBox/ReviewBox';
-import RelatedMoviesBox from './RelatedMoviesBox/RelatedMoviesBox';
+import ReviewBox from '../ReviewBox/ReviewBox';
+import RelatedMoviesBox from '../RelatedMoviesBox/RelatedMoviesBox';
 import { useMovieReviewQuery } from '../../../../hooks/useMovieReview';
 import { useRelatedMoviesQuery } from '../../../../hooks/useRelatedMovies';
 
@@ -13,13 +13,13 @@ const MovieDetailMoreInfo = ({ id }) => {
   return (
     <div className='more-info-area'>
       <button
-        className={btnActive ? 'active' : ''}
+        className={`info-btn ${btnActive ? 'active' : ''}`}
         onClick={() => setBtnActive(!btnActive)}
       >
         REVIEW ({review?.length})
       </button>
       <button
-        className={btnActive ? '' : 'active'}
+        className={`info-btn ${btnActive ? '' : 'active'}`}
         onClick={() => setBtnActive(!btnActive)}
       >
         RELATED MOVIES ({relatedMovies?.length})

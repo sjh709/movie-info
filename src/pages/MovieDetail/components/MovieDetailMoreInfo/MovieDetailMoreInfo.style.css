@@ -1,4 +1,4 @@
-.more-info-area button {
+.more-info-area .info-btn {
   border: none;
   background: var(--color-white);
   color: var(--color-purple);
@@ -6,7 +6,7 @@
   padding: 10px 35px;
   border-radius: 5px;
 }
-.more-info-area button.active {
+.more-info-area .info-btn.active {
   background-color: var(--color-purple);
   color: var(--color-white);
 }

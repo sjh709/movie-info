@@ -1,9 +1,8 @@
 import React from 'react';
 import { Row, Col } from 'react-bootstrap';
-import MovieCard from '../../../../../common/MovieCard/MovieCard';
+import MovieCard from '../../../../common/MovieCard/MovieCard';
 
 const RecommendBox = ({ relatedMovies }) => {
-  console.log(relatedMovies);
   return (
     <Row className='mt-4'>
       {relatedMovies?.map((item, index) => (
