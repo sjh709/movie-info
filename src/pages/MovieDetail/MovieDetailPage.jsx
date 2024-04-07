@@ -48,7 +48,7 @@ const MovieDetailPage = () => {
         </Row>
         <Row>
           <Col>
-            <MovieDetailMoreInfo />
+            <MovieDetailMoreInfo id={id} />
           </Col>
         </Row>
       </Container>
