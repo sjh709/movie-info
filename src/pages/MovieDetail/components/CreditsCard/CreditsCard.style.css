@@ -1,12 +1,3 @@
-/* Bootstrap css */
-.card {
-  width: 140px;
-  height: 100%;
-}
-.card-body {
-  padding: 10px;
-}
-/* css */
 .unknown-profile {
   height: 175px;
   background-color: var(--color-gainsboro);

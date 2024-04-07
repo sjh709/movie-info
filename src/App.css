@@ -65,6 +65,17 @@
   --bs-pagination-disabled-border-color: var(--color-purple);
   --bs-pagination-disabled-color: var(--color-white);
 }
+.card {
+  width: 140px;
+  height: 100%;
+}
+.card-body {
+  padding: 10px;
+}
+.btn-close {
+  --bs-btn-close-color: var(--color-white);
+  --bs-btn-close-opacity: 1;
+}
 /* css */
 body {
   background-color: var(--color-black);

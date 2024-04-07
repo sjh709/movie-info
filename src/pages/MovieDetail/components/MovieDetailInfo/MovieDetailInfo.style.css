@@ -28,3 +28,13 @@
 .movie-title {
   font-size: 3rem;
 }
+.modal-90w {
+  max-width: 90vw;
+}
+.modal-style {
+  background-color: var(--color-black);
+  height: 90vh;
+}
+.modal-style > * {
+  border: none;
+}
