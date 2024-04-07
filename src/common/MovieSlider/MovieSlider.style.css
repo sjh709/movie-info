@@ -1,3 +1,12 @@
+/* Carousel css */
+.react-multi-carousel-dot button {
+  border-color: var(--color-white);
+  background-color: var(--color-black);
+}
+.react-multi-carousel-dot--active button {
+  background-color: var(--color-purple);
+}
+/* css */
 .carousel-container {
   overflow: hidden;
   height: 260px;

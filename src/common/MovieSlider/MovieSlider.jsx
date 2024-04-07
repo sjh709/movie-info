@@ -12,7 +12,7 @@ const MovieSlider = ({ title, movies, responsive }) => {
         draggable={false}
         infinite={true}
         autoPlay={true}
-        autoPlaySpeed={5000}
+        autoPlaySpeed={10000}
         showDots={true}
         centerMode={true}
         containerClass='carousel-container'

@@ -46,6 +46,12 @@
 .nav-link {
   text-align: center;
 }
+.nav-link:hover {
+  color: var(--color-white);
+}
+.nav-link:focus {
+  color: var(--color-white);
+}
 .pagination {
   --bs-pagination-bg: var(--color-black);
   --bs-pagination-border-color: var(--color-purple);
