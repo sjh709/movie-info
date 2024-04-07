@@ -11,7 +11,7 @@ const MovieDetailMoreInfo = ({ id }) => {
   const { data: relatedMovies } = useRelatedMoviesQuery({ id });
 
   return (
-    <div className='button-area'>
+    <div className='more-info-area'>
       <button
         className={btnActive ? 'active' : ''}
         onClick={() => setBtnActive(!btnActive)}

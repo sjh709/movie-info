@@ -1,8 +1,9 @@
 import React from 'react';
 import { useMovieDetailCreditsQuery } from '../../../../hooks/useMovieDetailCredits';
-import { Alert, Col, Row } from 'react-bootstrap';
+import { Alert, Col, Container, Row } from 'react-bootstrap';
 import LoadingSpinner from '../../../../common/LoadingSpinner/LoadingSpinner';
 import CreditsCard from '../CreditsCard/CreditsCard';
+import './MovieDetailCredits.style.css';
 
 const MovieDetailCredits = ({ id }) => {
   const {
@@ -22,18 +23,20 @@ const MovieDetailCredits = ({ id }) => {
   }
 
   return (
-    <Row>
-      <Col>
-        <h3>Top Billed Cast</h3>
-        <Row className='mb-5'>
-          {credits?.splice(0, 8).map((item, index) => (
-            <Col key={index}>
-              <CreditsCard credits={item} />
-            </Col>
-          ))}
-        </Row>
-      </Col>
-    </Row>
+    <Container>
+      <Row>
+        <Col>
+          <h3>Top Billed Cast</h3>
+          <Row className='mb-4 item-align'>
+            {credits?.splice(0, 6).map((item, index) => (
+              <Col key={index} xs='auto' className='mb-3'>
+                <CreditsCard credits={item} />
+              </Col>
+            ))}
+          </Row>
+        </Col>
+      </Row>
+    </Container>
   );
 };
 
