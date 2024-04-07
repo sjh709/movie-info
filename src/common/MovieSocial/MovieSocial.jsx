@@ -8,13 +8,13 @@ const MovieSocial = ({ movie }) => {
   return (
     <div className='overlay-info'>
       <FontAwesomeIcon icon={faImdb} style={{ color: `var(--color-yellow)` }} />
-      <span>{movie.vote_average}</span>
+      <span>{movie?.vote_average}</span>
       <FontAwesomeIcon
         icon={faUsers}
         style={{ color: `var(--color-light-slate-gray)` }}
       />
-      <span>{movie.popularity}</span>
-      <span className='adult'>{movie.adult ? 'over18' : 'under18'}</span>
+      <span>{movie?.popularity}</span>
+      <span className='adult'>{movie?.adult ? 'over 18' : 'under 18'}</span>
     </div>
   );
 };

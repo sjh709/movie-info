@@ -8,7 +8,6 @@ import MovieSocial from '../MovieSocial/MovieSocial';
 const MovieCard = ({ movie }) => {
   const { data: genreData } = useMovieGenreQuery();
   const navigate = useNavigate();
-  // console.log(movie);
 
   const showGenre = (genreIdList) => {
     if (!genreData) return [];
@@ -28,15 +27,15 @@ const MovieCard = ({ movie }) => {
       style={{
         backgroundImage:
           'url(https://media.themoviedb.org/t/p/w710_and_h400_multi_faces' +
-          `${movie.poster_path}` +
+          `${movie?.poster_path}` +
           ')',
       }}
       className='movie-card'
-      onClick={() => movieDetailPage(movie.id)}
+      onClick={() => movieDetailPage(movie?.id)}
     >
       <div className='overlay'>
-        <h3 className='overlay-title'>{movie.title}</h3>
-        {showGenre(movie.genre_ids).map((id, index) => (
+        <h3 className='overlay-title'>{movie?.title}</h3>
+        {showGenre(movie?.genre_ids).map((id, index) => (
           <Badge bg='primary' key={index}>
             {id}
           </Badge>

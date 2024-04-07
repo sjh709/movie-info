@@ -8,17 +8,19 @@ import { responsive } from '../../../../constants/responsive';
 
 const PopularMovieSlide = () => {
   const { data, isLoading, isError, error } = usePopularMoviesQuery();
+
   if (isLoading) {
     return <LoadingSpinner />;
   }
   if (isError) {
     return <Alert variant='danger'>{error.message}</Alert>;
   }
+
   return (
     <div>
       <MovieSlider
         title='Popular Movies'
-        movies={data.results}
+        movies={data?.results}
         responsive={responsive}
       />
     </div>

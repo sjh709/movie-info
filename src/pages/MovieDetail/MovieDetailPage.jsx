@@ -15,7 +15,6 @@ const MovieDetailPage = () => {
     isError,
     error,
   } = useMovieDetailQuery({ id });
-  // console.log(movie);
 
   if (isLoading) {
     return <LoadingSpinner />;
@@ -30,7 +29,7 @@ const MovieDetailPage = () => {
         style={{
           backgroundImage:
             'url(' +
-            `https://media.themoviedb.org/t/p/w1920_and_h800_multi_faces${movie.backdrop_path}` +
+            `https://media.themoviedb.org/t/p/w1920_and_h800_multi_faces${movie?.backdrop_path}` +
             ')',
         }}
         className='detail-banner'

@@ -7,8 +7,6 @@ import MovieSocial from '../../../../common/MovieSocial/MovieSocial';
 import Line from './Line/Line';
 
 const MovieDetailInfo = ({ movie }) => {
-  console.log(movie);
-
   const priceToString = (price) => {
     return price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
   };
@@ -19,6 +17,7 @@ const MovieDetailInfo = ({ movie }) => {
         <img
           src={`https://image.tmdb.org/t/p/original${movie?.poster_path}`}
           className='movie-img'
+          alt='movie-image'
         />
       </Col>
       <Col lg={6}>
