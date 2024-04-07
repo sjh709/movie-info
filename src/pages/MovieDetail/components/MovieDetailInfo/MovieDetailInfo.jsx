@@ -5,11 +5,24 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFilm } from '@fortawesome/free-solid-svg-icons';
 import MovieSocial from '../../../../common/MovieSocial/MovieSocial';
 import Line from '../Line/Line';
+import { useMovieTrailerQuery } from '../../../../hooks/useMovieTrailer';
+import YouTube from 'react-youtube';
 
-const MovieDetailInfo = ({ movie }) => {
+const MovieDetailInfo = ({ movie, id }) => {
   const [show, setShow] = useState(false);
+  const { data: video } = useMovieTrailerQuery({ id });
+
   const priceToString = (price) => {
     return price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+  };
+
+  const opts = {
+    height: '100%',
+    width: '100%',
+    playerVars: {
+      autoplay: 1,
+      modestbranding: 1, // 컨트롤 바에 youtube 로고를 표시하지 않음
+    },
   };
 
   return (
@@ -80,12 +93,12 @@ const MovieDetailInfo = ({ movie }) => {
       >
         <Modal.Header closeVariant='white' closeButton />
         <Modal.Body>
-          {/* <YouTube
-        videoId={videoId}
-        opts={opts}
-        style={{ height: '100%' }}
-        onReady={(event) => event.target.mute()}
-      /> */}
+          <YouTube
+            videoId={video && video[0].key}
+            opts={opts}
+            style={{ height: '100%' }}
+            onReady={(event) => event.target.mute()}
+          />
         </Modal.Body>
       </Modal>
     </div>

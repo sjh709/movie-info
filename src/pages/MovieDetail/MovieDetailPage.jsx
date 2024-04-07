@@ -38,7 +38,7 @@ const MovieDetailPage = () => {
       <Container className='mt-5 mb-5'>
         <Row>
           <Col>
-            <MovieDetailInfo movie={movie} />
+            <MovieDetailInfo movie={movie} id={id} />
           </Col>
         </Row>
         <Row>
