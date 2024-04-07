@@ -5,9 +5,12 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUsers } from '@fortawesome/free-solid-svg-icons';
 import { faImdb } from '@fortawesome/free-brands-svg-icons';
 import { useMovieGenreQuery } from '../../hooks/useMovieGenre';
+import { useNavigate } from 'react-router-dom';
 
 const MovieCard = ({ movie }) => {
   const { data: genreData } = useMovieGenreQuery();
+  const navigate = useNavigate();
+  // console.log(movie);
 
   const showGenre = (genreIdList) => {
     if (!genreData) return [];
@@ -16,6 +19,10 @@ const MovieCard = ({ movie }) => {
       return genreObj.name;
     });
     return genreNameList;
+  };
+
+  const movieDetailPage = (id) => {
+    navigate(`/movies/${id}`);
   };
 
   return (
@@ -27,6 +34,7 @@ const MovieCard = ({ movie }) => {
           ')',
       }}
       className='movie-card'
+      onClick={() => movieDetailPage(movie.id)}
     >
       <div className='overlay'>
         <h3 className='overlay-title'>{movie.title}</h3>
