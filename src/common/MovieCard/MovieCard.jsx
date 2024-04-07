@@ -1,11 +1,9 @@
 import React from 'react';
 import { Badge } from 'react-bootstrap';
 import './MovieCard.style.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faUsers } from '@fortawesome/free-solid-svg-icons';
-import { faImdb } from '@fortawesome/free-brands-svg-icons';
 import { useMovieGenreQuery } from '../../hooks/useMovieGenre';
 import { useNavigate } from 'react-router-dom';
+import MovieSocial from '../MovieSocial/MovieSocial';
 
 const MovieCard = ({ movie }) => {
   const { data: genreData } = useMovieGenreQuery();
@@ -43,18 +41,8 @@ const MovieCard = ({ movie }) => {
             {id}
           </Badge>
         ))}
-        <div className='overlay-info'>
-          <FontAwesomeIcon
-            icon={faImdb}
-            style={{ color: `var(--color-yellow)` }}
-          />
-          <span>{movie.vote_average}</span>
-          <FontAwesomeIcon
-            icon={faUsers}
-            style={{ color: `var(--color-light-slate-gray)` }}
-          />
-          <span>{movie.popularity}</span>
-          <span className='adult'>{movie.adult ? 'over18' : 'under18'}</span>
+        <div className='align-bottom'>
+          <MovieSocial movie={movie} className='align-bottom' />
         </div>
       </div>
     </div>

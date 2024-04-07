@@ -1,7 +1,54 @@
 import React from 'react';
+import { useParams } from 'react-router-dom';
+import { useMovieDetailQuery } from '../../hooks/useMovieDetail';
+import LoadingSpinner from '../../common/LoadingSpinner/LoadingSpinner';
+import { Alert, Container, Row, Col } from 'react-bootstrap';
+import MovieDetailInfo from './components/MovieDetailInfo/MovieDetailInfo';
+import MovieDetailMoreInfo from './components/MovieDetailMoreInfo/MovieDetailMoreInfo';
+import './MovieDetailPage.style.css';
 
 const MovieDetailPage = () => {
-  return <div>MovieDetailPage</div>;
+  const { id } = useParams();
+  const {
+    data: movie,
+    isLoading,
+    isError,
+    error,
+  } = useMovieDetailQuery({ id });
+  // console.log(movie);
+
+  if (isLoading) {
+    return <LoadingSpinner />;
+  }
+  if (isError) {
+    return <Alert variant='danger'>{error.message}</Alert>;
+  }
+
+  return (
+    <div>
+      <div
+        style={{
+          backgroundImage:
+            'url(' +
+            `https://media.themoviedb.org/t/p/w1920_and_h800_multi_faces${movie.backdrop_path}` +
+            ')',
+        }}
+        className='detail-banner'
+      ></div>
+      <Container className='mt-5 mb-5'>
+        <Row>
+          <Col>
+            <MovieDetailInfo movie={movie} />
+          </Col>
+        </Row>
+        <Row>
+          <Col>
+            <MovieDetailMoreInfo />
+          </Col>
+        </Row>
+      </Container>
+    </div>
+  );
 };
 
 export default MovieDetailPage;

@@ -1,0 +1,12 @@
+.movie-img {
+  width: 100%;
+}
+.info-badge {
+  display: inline-block;
+  width: 45%;
+  font-size: 1rem;
+  border-radius: 30px;
+  padding: 8px 30px;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+}
