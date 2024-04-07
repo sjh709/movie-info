@@ -1,0 +1,14 @@
+.button-area {
+  /* display: flex; */
+}
+.button-area button {
+  border: none;
+  background: var(--color-white);
+  margin-right: 1rem;
+  padding: 10px 35px;
+  border-radius: 5px;
+}
+.button-area button.active {
+  background-color: var(--color-purple);
+  color: var(--color-white);
+}
