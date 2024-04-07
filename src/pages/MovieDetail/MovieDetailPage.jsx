@@ -6,6 +6,7 @@ import { Alert, Container, Row, Col } from 'react-bootstrap';
 import MovieDetailInfo from './components/MovieDetailInfo/MovieDetailInfo';
 import MovieDetailMoreInfo from './components/MovieDetailMoreInfo/MovieDetailMoreInfo';
 import './MovieDetailPage.style.css';
+import MovieDetailCredits from './components/MovieDetailCredits/MovieDetailCredits';
 
 const MovieDetailPage = () => {
   const { id } = useParams();
@@ -38,6 +39,11 @@ const MovieDetailPage = () => {
         <Row>
           <Col>
             <MovieDetailInfo movie={movie} />
+          </Col>
+        </Row>
+        <Row>
+          <Col>
+            <MovieDetailCredits id={id} />
           </Col>
         </Row>
         <Row>
