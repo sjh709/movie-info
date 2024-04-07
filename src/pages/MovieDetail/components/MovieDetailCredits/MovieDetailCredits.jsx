@@ -24,7 +24,7 @@ const MovieDetailCredits = ({ id }) => {
   return (
     <Row>
       <Col>
-        <h3>주요 출연진</h3>
+        <h3>Top Billed Cast</h3>
         <Row className='mb-5'>
           {credits?.splice(0, 8).map((item, index) => (
             <Col key={index}>

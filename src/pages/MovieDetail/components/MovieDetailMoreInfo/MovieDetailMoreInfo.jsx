@@ -9,8 +9,6 @@ const MovieDetailMoreInfo = ({ id }) => {
   const [btnActive, setBtnActive] = useState(true);
   const { data: review } = useMovieReviewQuery({ id });
   const { data: relatedMovies } = useRelatedMoviesQuery({ id });
-  console.log('review', review);
-  console.log('relatedMovies', relatedMovies);
 
   return (
     <div className='button-area'>
@@ -18,13 +16,13 @@ const MovieDetailMoreInfo = ({ id }) => {
         className={btnActive ? 'active' : ''}
         onClick={() => setBtnActive(!btnActive)}
       >
-        REVIEW ({review.length})
+        REVIEW ({review?.length})
       </button>
       <button
         className={btnActive ? '' : 'active'}
         onClick={() => setBtnActive(!btnActive)}
       >
-        RELATED MOVIES ({relatedMovies.length})
+        RELATED MOVIES ({relatedMovies?.length})
       </button>
       <div>
         {btnActive ? <ReviewBox review={review} /> : <RelatedMoviesBox />}
