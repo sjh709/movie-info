@@ -25,7 +25,11 @@ const MovieDetailMoreInfo = ({ id }) => {
         RELATED MOVIES ({relatedMovies?.length})
       </button>
       <div>
-        {btnActive ? <ReviewBox review={review} /> : <RelatedMoviesBox />}
+        {btnActive ? (
+          <ReviewBox review={review} />
+        ) : (
+          <RelatedMoviesBox relatedMovies={relatedMovies} />
+        )}
       </div>
     </div>
   );

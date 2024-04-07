@@ -3,7 +3,6 @@ import { Row, Col } from 'react-bootstrap';
 import './ReviewBox.style.css';
 
 const ReviewBox = ({ review }) => {
-  console.log(review);
   return (
     <Row className='mt-4 px-4 py-2 review-box'>
       {review?.map((item, index) => (

@@ -1,7 +1,18 @@
 import React from 'react';
+import { Row, Col } from 'react-bootstrap';
+import MovieCard from '../../../../../common/MovieCard/MovieCard';
 
-const RecommendBox = () => {
-  return <div>RecommendBox</div>;
+const RecommendBox = ({ relatedMovies }) => {
+  console.log(relatedMovies);
+  return (
+    <Row className='mt-4'>
+      {relatedMovies?.map((item, index) => (
+        <Col lg={6} key={index} className=''>
+          <MovieCard movie={item} />
+        </Col>
+      ))}
+    </Row>
+  );
 };
 
 export default RecommendBox;
