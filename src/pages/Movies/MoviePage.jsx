@@ -16,6 +16,7 @@ const MoviePage = () => {
   const keyword = query.get('q');
   const [sortValue, setSortValue] = useState('');
   const [data, setData] = useState(null);
+  const [genreId, setGenreId] = useState([]);
 
   const {
     data: movieList,
@@ -30,6 +31,7 @@ const MoviePage = () => {
   const handlePageClick = ({ selected }) => {
     setPage(selected + 1);
     setSortValue('');
+    setGenreId([]);
   };
 
   const sortMovie = () => {
@@ -78,6 +80,14 @@ const MoviePage = () => {
     }
   };
 
+  const genreMovies = () => {
+    let genreData = [...movieList.results].filter((item) =>
+      genreId.some((i) => item.genre_ids.includes(i))
+    );
+    setData({ ...data, results: genreData });
+    return;
+  };
+
   useEffect(() => {
     if (sortValue !== '') {
       sortMovie();
@@ -85,6 +95,14 @@ const MoviePage = () => {
       setData(movieList);
     }
   }, [sortValue, movieList]);
+
+  useEffect(() => {
+    if (genreId.length > 0) {
+      genreMovies();
+    } else {
+      setData(movieList);
+    }
+  }, [genreId]);
 
   if (isLoading) {
     return <LoadingSpinner />;
@@ -102,7 +120,7 @@ const MoviePage = () => {
             sortValue={sortValue}
             setSortValue={setSortValue}
           />
-          <SideBar title='Filter' />
+          <SideBar title='Filter' genreId={genreId} setGenreId={setGenreId} />
         </Col>
         <Col lg={8} xs={12}>
           <Row>
