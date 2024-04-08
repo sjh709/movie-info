@@ -38,3 +38,15 @@
 .modal-style > * {
   border: none;
 }
+/* 태블릿 */
+@media (max-width: 768px) {
+  .btn-trailer {
+    width: 100%;
+  }
+}
+/* 모바일 */
+@media (max-width: 430px) {
+  .btn-trailer {
+    width: 100%;
+  }
+}
