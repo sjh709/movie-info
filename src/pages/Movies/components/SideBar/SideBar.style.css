@@ -1,0 +1,19 @@
+.side-bar-area {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 1rem;
+}
+.side-bar-style {
+  display: flex;
+  border: 1px solid;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  width: 80%;
+}
+.side-bar-style > h5 {
+  margin: 0;
+}

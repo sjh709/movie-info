@@ -5,6 +5,7 @@ import LoadingSpinner from '../../common/LoadingSpinner/LoadingSpinner';
 import { Alert, Container, Row, Col } from 'react-bootstrap';
 import MovieCardDetail from './components/MovieCardDetail/MovieCardDetail';
 import ReactPaginate from 'react-paginate';
+import SideBar from './components/SideBar/SideBar';
 
 // 경로
 // 1. nav바에서 클릭해서 온 경우 => popularMovie 보여줌
@@ -34,7 +35,8 @@ const MoviePage = () => {
     <Container className='mt-5'>
       <Row>
         <Col lg={4} xs={12}>
-          필터
+          <SideBar title='Sort' />
+          <SideBar title='Filter' />
         </Col>
         <Col lg={8} xs={12}>
           <Row>
