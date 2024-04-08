@@ -27,8 +27,10 @@
 }
 .overlay-title {
   font-weight: 600;
+  font-size: 1.5rem;
 }
-.align-bottom {
+.card-style {
   position: absolute;
   bottom: 10px;
+  font-size: 0.8rem;
 }

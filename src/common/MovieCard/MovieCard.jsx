@@ -40,8 +40,8 @@ const MovieCard = ({ movie }) => {
             {id}
           </Badge>
         ))}
-        <div className='align-bottom'>
-          <MovieSocial movie={movie} className='align-bottom' />
+        <div className='card-style'>
+          <MovieSocial movie={movie} />
         </div>
       </div>
     </div>
