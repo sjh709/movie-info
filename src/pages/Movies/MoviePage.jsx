@@ -38,13 +38,13 @@ const MoviePage = () => {
     let sortedData;
     switch (sortValue) {
       case 'Popularity(Asc)':
-        sortedData = [...movieList.results].sort(
+        sortedData = [...data.results].sort(
           (a, b) => a.popularity - b.popularity
         );
         setData({ ...data, results: sortedData });
         return;
       case 'Release Day(Desc)':
-        sortedData = [...movieList.results].sort(
+        sortedData = [...data.results].sort(
           (a, b) =>
             Number(b.release_date.split('-').join('')) -
             Number(a.release_date.split('-').join(''))
@@ -52,7 +52,7 @@ const MoviePage = () => {
         setData({ ...data, results: sortedData });
         return;
       case 'Release Day(Asc)':
-        sortedData = [...movieList.results].sort(
+        sortedData = [...data.results].sort(
           (a, b) =>
             Number(a.release_date.split('-').join('')) -
             Number(b.release_date.split('-').join(''))
@@ -60,19 +60,19 @@ const MoviePage = () => {
         setData({ ...data, results: sortedData });
         return;
       case 'Vote(Desc)':
-        sortedData = [...movieList.results].sort(
+        sortedData = [...data.results].sort(
           (a, b) => b.vote_average - a.vote_average
         );
         setData({ ...data, results: sortedData });
         return;
       case 'Vote(Asc)':
-        sortedData = [...movieList.results].sort(
+        sortedData = [...data.results].sort(
           (a, b) => a.vote_average - b.vote_average
         );
         setData({ ...data, results: sortedData });
         return;
       default:
-        sortedData = [...movieList.results].sort(
+        sortedData = [...data.results].sort(
           (a, b) => b.popularity - a.popularity
         );
         setData({ ...data, results: sortedData });
@@ -81,7 +81,7 @@ const MoviePage = () => {
   };
 
   const genreMovies = () => {
-    let genreData = [...movieList.results].filter((item) =>
+    let genreData = [...data.results].filter((item) =>
       genreId.some((i) => item.genre_ids.includes(i))
     );
     setData({ ...data, results: genreData });
