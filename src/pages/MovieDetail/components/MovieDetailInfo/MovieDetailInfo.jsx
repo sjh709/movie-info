@@ -94,7 +94,7 @@ const MovieDetailInfo = ({ movie, id }) => {
         <Modal.Header closeVariant='white' closeButton />
         <Modal.Body>
           <YouTube
-            videoId={video && video[0].key}
+            videoId={video && video[0]?.key}
             opts={opts}
             style={{ height: '100%' }}
             onReady={(event) => event.target.mute()}

@@ -10,6 +10,9 @@ import SideBar from './components/SideBar/SideBar';
 // 경로
 // 1. nav바에서 클릭해서 온 경우 => popularMovie 보여줌
 // 2. 키워드 입력해서 온 경우 => 키워드와 관련된 영화들을 보여줌
+
+const CURRENT_YEAR = new Date().getFullYear();
+
 const MoviePage = () => {
   const [query, setQuery] = useSearchParams();
   const [page, setPage] = useState(1);
@@ -17,6 +20,7 @@ const MoviePage = () => {
   const [sortValue, setSortValue] = useState('');
   const [data, setData] = useState(null);
   const [genreId, setGenreId] = useState([]);
+  const [year, setYear] = useState([0, CURRENT_YEAR]);
 
   const {
     data: movieList,
@@ -32,6 +36,7 @@ const MoviePage = () => {
     setPage(selected + 1);
     setSortValue('');
     setGenreId([]);
+    setYear([0, CURRENT_YEAR]);
   };
 
   const sortMovie = () => {
@@ -80,14 +85,6 @@ const MoviePage = () => {
     }
   };
 
-  const genreMovies = () => {
-    let genreData = [...data.results].filter((item) =>
-      genreId.some((i) => item.genre_ids.includes(i))
-    );
-    setData({ ...data, results: genreData });
-    return;
-  };
-
   useEffect(() => {
     if (sortValue !== '') {
       sortMovie();
@@ -95,14 +92,6 @@ const MoviePage = () => {
       setData(movieList);
     }
   }, [sortValue, movieList]);
-
-  useEffect(() => {
-    if (genreId.length > 0) {
-      genreMovies();
-    } else {
-      setData(movieList);
-    }
-  }, [genreId]);
 
   if (isLoading) {
     return <LoadingSpinner />;
@@ -120,15 +109,30 @@ const MoviePage = () => {
             sortValue={sortValue}
             setSortValue={setSortValue}
           />
-          <SideBar title='Filter' genreId={genreId} setGenreId={setGenreId} />
+          <SideBar
+            title='Filter'
+            genreId={genreId}
+            setGenreId={setGenreId}
+            year={year}
+            setYear={setYear}
+          />
         </Col>
         <Col lg={8} xs={12}>
           <Row>
-            {data?.results.map((movie, index) => (
-              <Col key={index} lg={6} xs={12}>
-                <MovieCardDetail movie={movie} />
-              </Col>
-            ))}
+            {data?.results
+              .filter(
+                (item) =>
+                  item.release_date.slice(0, 4) >= year[0] &&
+                  item.release_date.slice(0, 4) <= year[1]
+              )
+              .filter((item) =>
+                genreId.every((i) => item.genre_ids.includes(i))
+              )
+              .map((movie, index) => (
+                <Col key={index} lg={6} xs={12}>
+                  <MovieCardDetail movie={movie} />
+                </Col>
+              ))}
           </Row>
           <ReactPaginate
             nextLabel='>'

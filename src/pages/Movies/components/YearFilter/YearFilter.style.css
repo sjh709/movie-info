@@ -1,5 +1,30 @@
+.year-filter-wrapper {
+  padding: 1rem;
+  border-top: 1px solid;
+}
 .year-filter-area {
   text-align: center;
-  border-top: 1px solid;
-  padding: 1rem 0;
+  padding: 1rem 1.3rem;
+  margin-bottom: 1rem;
+}
+.year-filter-area p {
+  font-size: 0.8rem;
+}
+.year-filter-area p span {
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+.range-slider {
+  height: 5px;
+  margin-top: 1.2rem;
+}
+.range-slider .range-slider__range {
+  background: var(--color-purple);
+  border-radius: 4px;
+}
+.range-slider .range-slider__thumb {
+  background: var(--color-purple);
+  width: 15px;
+  height: 15px;
 }

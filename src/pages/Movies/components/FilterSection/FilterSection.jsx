@@ -3,10 +3,10 @@ import YearFilter from '../YearFilter/YearFilter';
 import GenreFilter from '../GenreFilter/GenreFilter';
 import './FilterSection.style.css';
 
-const FilterSection = ({ sideOpen, genreId, setGenreId }) => {
+const FilterSection = ({ sideOpen, genreId, setGenreId, year, setYear }) => {
   return (
     <div className={`filter-style ${sideOpen ? 'open' : 'close'}`}>
-      <YearFilter />
+      <YearFilter year={year} setYear={setYear} />
       <GenreFilter genreId={genreId} setGenreId={setGenreId} />
     </div>
   );
