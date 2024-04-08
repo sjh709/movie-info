@@ -53,10 +53,16 @@
   .btn-trailer {
     width: 100%;
   }
+  .poster-area {
+    height: 587px;
+  }
 }
 /* 모바일 */
 @media (max-width: 430px) {
   .btn-trailer {
     width: 100%;
+  }
+  .poster-area {
+    height: 387px;
   }
 }
