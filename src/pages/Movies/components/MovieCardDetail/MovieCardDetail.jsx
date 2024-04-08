@@ -35,7 +35,7 @@ const MovieCardDetail = ({ movie }) => {
             {movie?.poster_path === null ? (
               <div className='card-poster-area'>
                 <img
-                  width={40}
+                  width={60}
                   src={`https://www.themoviedb.org/assets/2/v4/glyphicons/basic/glyphicons-basic-38-picture-grey-c2ebdbb057f2a7614185931650f8cee23fa137b93812ccb132b9df511df1cfac.svg`}
                 />
               </div>
