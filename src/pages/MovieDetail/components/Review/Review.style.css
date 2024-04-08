@@ -18,3 +18,9 @@
 .review-author {
   font-weight: 700;
 }
+/* 모바일 */
+@media (max-width: 430px) {
+  .more-button {
+    text-align: left;
+  }
+}
