@@ -32,12 +32,22 @@ const MovieCardDetail = ({ movie }) => {
       >
         <div>
           <div className='movie-card-title'>
-            <img
-              width={60}
-              height={90}
-              src={`https://image.tmdb.org/t/p/original${movie?.poster_path}`}
-              alt='movie-image'
-            />
+            {movie?.poster_path === null ? (
+              <div className='card-poster-area'>
+                <img
+                  width={40}
+                  src={`https://www.themoviedb.org/assets/2/v4/glyphicons/basic/glyphicons-basic-38-picture-grey-c2ebdbb057f2a7614185931650f8cee23fa137b93812ccb132b9df511df1cfac.svg`}
+                />
+              </div>
+            ) : (
+              <img
+                width={60}
+                height={90}
+                src={`https://image.tmdb.org/t/p/original${movie?.poster_path}`}
+                alt='movie-image'
+              />
+            )}
+
             <div>
               <h1>{movie?.title}</h1>
               <h4>{movie?.release_date.substr(0, 4)}</h4>

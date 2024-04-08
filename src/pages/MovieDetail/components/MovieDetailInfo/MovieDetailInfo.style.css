@@ -38,6 +38,16 @@
 .modal-style > * {
   border: none;
 }
+.poster-area {
+  background-color: var(--color-gainsboro);
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.empty-poster {
+  width: 30%;
+}
 /* 태블릿 */
 @media (max-width: 768px) {
   .btn-trailer {
