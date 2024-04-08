@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useSearchMovieQuery } from '../../hooks/useSearchMovie';
 import { useSearchParams } from 'react-router-dom';
 import LoadingSpinner from '../../common/LoadingSpinner/LoadingSpinner';
@@ -14,15 +14,77 @@ const MoviePage = () => {
   const [query, setQuery] = useSearchParams();
   const [page, setPage] = useState(1);
   const keyword = query.get('q');
+  const [sortValue, setSortValue] = useState('');
+  const [data, setData] = useState(null);
 
-  const { data, isLoading, isError, error } = useSearchMovieQuery({
+  const {
+    data: movieList,
+    isLoading,
+    isError,
+    error,
+  } = useSearchMovieQuery({
     keyword,
     page,
   });
 
   const handlePageClick = ({ selected }) => {
     setPage(selected + 1);
+    setSortValue('');
   };
+
+  const sortMovie = () => {
+    let sortedData;
+    switch (sortValue) {
+      case 'Popularity(Asc)':
+        sortedData = [...movieList.results].sort(
+          (a, b) => a.popularity - b.popularity
+        );
+        setData({ ...data, results: sortedData });
+        return;
+      case 'Release Day(Desc)':
+        sortedData = [...movieList.results].sort(
+          (a, b) =>
+            Number(b.release_date.split('-').join('')) -
+            Number(a.release_date.split('-').join(''))
+        );
+        setData({ ...data, results: sortedData });
+        return;
+      case 'Release Day(Asc)':
+        sortedData = [...movieList.results].sort(
+          (a, b) =>
+            Number(a.release_date.split('-').join('')) -
+            Number(b.release_date.split('-').join(''))
+        );
+        setData({ ...data, results: sortedData });
+        return;
+      case 'Vote(Desc)':
+        sortedData = [...movieList.results].sort(
+          (a, b) => b.vote_average - a.vote_average
+        );
+        setData({ ...data, results: sortedData });
+        return;
+      case 'Vote(Asc)':
+        sortedData = [...movieList.results].sort(
+          (a, b) => a.vote_average - b.vote_average
+        );
+        setData({ ...data, results: sortedData });
+        return;
+      default:
+        sortedData = [...movieList.results].sort(
+          (a, b) => b.popularity - a.popularity
+        );
+        setData({ ...data, results: sortedData });
+        return;
+    }
+  };
+
+  useEffect(() => {
+    if (sortValue !== '') {
+      sortMovie();
+    } else if (movieList) {
+      setData(movieList);
+    }
+  }, [sortValue, movieList]);
 
   if (isLoading) {
     return <LoadingSpinner />;
@@ -35,7 +97,11 @@ const MoviePage = () => {
     <Container className='mt-5'>
       <Row>
         <Col lg={4} xs={12}>
-          <SideBar title='Sort' />
+          <SideBar
+            title='Sort'
+            sortValue={sortValue}
+            setSortValue={setSortValue}
+          />
           <SideBar title='Filter' />
         </Col>
         <Col lg={8} xs={12}>
@@ -51,7 +117,7 @@ const MoviePage = () => {
             onPageChange={handlePageClick}
             pageRangeDisplayed={2}
             marginPagesDisplayed={2}
-            pageCount={data?.total_pages > 500 ? 500 : data.total_pages}
+            pageCount={data?.total_pages > 500 ? 500 : data?.total_pages}
             previousLabel='<'
             pageClassName='page-item'
             pageLinkClassName='page-link'

@@ -5,7 +5,7 @@ import './SideBar.style.css';
 import SortSection from '../SortSection/SortSection';
 import FilterSection from '../FilterSection/FilterSection';
 
-const SideBar = ({ title }) => {
+const SideBar = ({ title, sortValue, setSortValue }) => {
   const [sideOpen, setSideOpen] = useState(false);
   return (
     <div>
@@ -22,7 +22,11 @@ const SideBar = ({ title }) => {
         </div>
         <div>
           {title === 'Sort' ? (
-            <SortSection sideOpen={sideOpen} />
+            <SortSection
+              sideOpen={sideOpen}
+              sortValue={sortValue}
+              setSortValue={setSortValue}
+            />
           ) : (
             <FilterSection sideOpen={sideOpen} />
           )}
