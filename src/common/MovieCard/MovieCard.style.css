@@ -34,3 +34,12 @@
   bottom: 10px;
   font-size: 0.8rem;
 }
+/* 모바일 */
+@media (max-width: 430px) {
+  .overlay-title {
+    font-size: 1.25rem;
+  }
+  .card-genre-style {
+    font-size: 0.8rem;
+  }
+}

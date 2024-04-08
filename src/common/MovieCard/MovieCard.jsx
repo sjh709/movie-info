@@ -35,11 +35,13 @@ const MovieCard = ({ movie }) => {
     >
       <div className='overlay'>
         <h3 className='overlay-title'>{movie?.title}</h3>
-        {showGenre(movie?.genre_ids).map((id, index) => (
-          <Badge bg='primary' key={index}>
-            {id}
-          </Badge>
-        ))}
+        <div className='card-genre-style'>
+          {showGenre(movie?.genre_ids).map((id, index) => (
+            <Badge bg='primary' key={index}>
+              {id}
+            </Badge>
+          ))}
+        </div>
         <div className='card-style'>
           <MovieSocial movie={movie} />
         </div>
