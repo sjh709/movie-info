@@ -76,6 +76,17 @@
   --bs-btn-close-color: var(--color-white);
   --bs-btn-close-opacity: 1;
 }
+.btn-primary {
+  --bs-btn-bg: var(--color-black);
+  --bs-btn-border-color: var(--color-purple);
+  --bs-btn-hover-bg: var(--color-black);
+  --bs-btn-hover-border-color: var(--color-black);
+  --bs-btn-active-bg: var(--color-black);
+  --bs-btn-active-border-color: var(--color-black);
+}
+.dropdown-item {
+  --bs-dropdown-link-active-bg: var(--color-purple);
+}
 /* css */
 body {
   background-color: var(--color-black);

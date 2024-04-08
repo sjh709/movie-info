@@ -1,0 +1,19 @@
+/* Bootstrap css */
+.sort-filter-area .dropdown-toggle {
+  border: none;
+  border-bottom: 1px solid var(--color-purple);
+  border-radius: 0;
+  width: 35%;
+}
+/* css */
+.sort-filter-style.close {
+  display: none;
+}
+.sort-filter-style.open {
+  display: block;
+}
+.sort-filter-style.open .sort-filter-area {
+  text-align: center;
+  border-top: 1px solid;
+  padding: 1rem 0;
+}
