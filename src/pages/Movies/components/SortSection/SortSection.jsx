@@ -19,8 +19,10 @@ const SortSection = ({ sideOpen }) => {
       <div className='sort-filter-area'>
         <h6>Sort Results By</h6>
         <DropdownButton title='Sort By'>
-          {sortArr.map((obj) => (
-            <Dropdown.Item eventKey={obj.key}>{obj.name}</Dropdown.Item>
+          {sortArr.map((obj, index) => (
+            <Dropdown.Item eventKey={obj.key} key={index}>
+              {obj.name}
+            </Dropdown.Item>
           ))}
         </DropdownButton>
       </div>
