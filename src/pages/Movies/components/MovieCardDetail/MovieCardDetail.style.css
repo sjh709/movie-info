@@ -13,6 +13,7 @@
   height: 99%;
   padding: 1.2rem;
   border-radius: 1rem;
+  background-size: cover;
 }
 .info-section::before {
   content: '';
