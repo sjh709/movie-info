@@ -1,0 +1,6 @@
+/* 모바일 */
+@media (max-width: 430px) {
+  .related-movie-area {
+    margin: 0 1rem;
+  }
+}

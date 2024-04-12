@@ -1,6 +1,7 @@
 import React from 'react';
 import { Row, Col } from 'react-bootstrap';
 import MovieCard from '../../../../common/MovieCard/MovieCard';
+import './RelatedMoviesBox.style.css';
 
 const RecommendBox = ({ relatedMovies }) => {
   return (
@@ -10,7 +11,7 @@ const RecommendBox = ({ relatedMovies }) => {
           <Col>추천 영화가 없습니다.</Col>
         </Row>
       ) : (
-        <Row className='mt-4'>
+        <Row className='mt-4 related-movie-area'>
           {relatedMovies?.map((item, index) => (
             <Col lg={6} key={index} className=''>
               <MovieCard movie={item} />

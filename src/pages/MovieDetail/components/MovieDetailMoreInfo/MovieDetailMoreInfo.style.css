@@ -25,4 +25,7 @@
     margin-bottom: 1rem;
     margin-right: 0;
   }
+  .more-info-area .info-btn {
+    margin-right: 0;
+  }
 }
