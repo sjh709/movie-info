@@ -28,7 +28,7 @@ const MovieDetailInfo = ({ movie, id }) => {
   return (
     <div>
       <Row className='mb-5'>
-        <Col lg={6}>
+        <Col lg={6} className='detail-info'>
           {movie?.poster_path === null ? (
             <div className='poster-area'>
               <img
@@ -44,7 +44,7 @@ const MovieDetailInfo = ({ movie, id }) => {
             />
           )}
         </Col>
-        <Col lg={6}>
+        <Col lg={6} className='detail-info'>
           <div className='mt-3 mb-3'>
             {movie?.genres.map((item, index) => (
               <Badge bg='primary' key={index}>
@@ -87,10 +87,12 @@ const MovieDetailInfo = ({ movie, id }) => {
             </li>
           </ul>
           <Line />
-          <button className='btn-trailer' onClick={() => setShow(true)}>
-            <FontAwesomeIcon icon={faFilm} />
-            <span>Watch Trailer</span>
-          </button>
+          <div className='btn-trailer-area'>
+            <button className='btn-trailer' onClick={() => setShow(true)}>
+              <FontAwesomeIcon icon={faFilm} />
+              <span>Watch Trailer</span>
+            </button>
+          </div>
         </Col>
       </Row>
       <Modal

@@ -16,10 +16,13 @@
 /* 모바일 */
 @media (max-width: 430px) {
   .more-info-area {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   .more-info-area button {
-    width: 100%;
+    width: 85%;
     margin-bottom: 1rem;
+    margin-right: 0;
   }
 }

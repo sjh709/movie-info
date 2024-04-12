@@ -50,8 +50,12 @@
 }
 /* 태블릿 */
 @media (max-width: 768px) {
+  .btn-trailer-area {
+    display: flex;
+    justify-content: center;
+  }
   .btn-trailer {
-    width: 100%;
+    width: 90%;
   }
   .poster-area {
     height: 587px;
@@ -59,10 +63,17 @@
 }
 /* 모바일 */
 @media (max-width: 430px) {
+  .btn-trailer-area {
+    display: flex;
+    justify-content: center;
+  }
   .btn-trailer {
-    width: 100%;
+    width: 90%;
   }
   .poster-area {
     height: 387px;
+  }
+  .detail-info {
+    padding: 0 1.5rem;
   }
 }

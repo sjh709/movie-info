@@ -28,7 +28,7 @@ const MovieDetailCredits = ({ id }) => {
         <Col>
           {credits?.length > 0 && (
             <div>
-              <h3 className='mb-3'>Top Billed Cast</h3>
+              <h3 className='mb-3 ms-2'>Top Billed Cast</h3>
               <Row className='mb-4 item-align'>
                 {credits?.splice(0, 6).map((item, index) => (
                   <Col key={index} xs='auto' className='mb-3'>
