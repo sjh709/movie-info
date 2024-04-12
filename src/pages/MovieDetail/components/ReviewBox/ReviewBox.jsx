@@ -5,7 +5,7 @@ import Review from '../Review/Review';
 
 const ReviewBox = ({ review }) => {
   return (
-    <div>
+    <div className='review-box-area'>
       {review?.length === 0 ? (
         <Row className='mt-4 px-4'>
           <Col>리뷰가 없습니다.</Col>
