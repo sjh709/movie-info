@@ -26,7 +26,7 @@ const MovieCard = ({ movie }) => {
     <div
       style={{
         backgroundImage:
-          'url(https://media.themoviedb.org/t/p/w710_and_h400_multi_faces' +
+          'url(https://media.themoviedb.org/t/p/w600_and_h900_bestv2' +
           `${movie?.poster_path}` +
           ')',
       }}

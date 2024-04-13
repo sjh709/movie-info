@@ -9,7 +9,7 @@
 /* css */
 .carousel-container {
   overflow: hidden;
-  height: 260px;
+  padding: 1rem 0;
 }
 .movie-slide-area {
   margin-top: 2rem;

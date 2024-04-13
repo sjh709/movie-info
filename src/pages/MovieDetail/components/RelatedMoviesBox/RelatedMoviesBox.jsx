@@ -13,7 +13,7 @@ const RecommendBox = ({ relatedMovies }) => {
       ) : (
         <Row className='mt-4 related-movie-area'>
           {relatedMovies?.map((item, index) => (
-            <Col lg={6} key={index} className=''>
+            <Col lg={2} xs={6} key={index} className='my-2'>
               <MovieCard movie={item} />
             </Col>
           ))}

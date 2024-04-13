@@ -1,9 +1,23 @@
+.overlay-info {
+  display: flex;
+  align-items: center;
+}
 .overlay-info > * {
-  margin-right: 10px;
+  margin-right: 8px;
 }
 .adult {
-  color: var(--color-crimson);
+  background-color: var(--color-crimson);
+  color: var(--color-white);
+  width: 22px;
+  height: 22px;
+  font-size: 8px;
+  font-weight: bold;
   font-style: italic;
+  border-radius: 50%;
+  margin-right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 /* 태블릿 */
 @media (max-width: 768px) {

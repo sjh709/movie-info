@@ -16,7 +16,7 @@ const MovieSlider = ({ title, movies, responsive }) => {
         showDots={true}
         centerMode={true}
         containerClass='carousel-container'
-        itemClass='p-1'
+        itemClass='p-2'
       >
         {movies.map((movie, index) => (
           <MovieCard movie={movie} key={index} />

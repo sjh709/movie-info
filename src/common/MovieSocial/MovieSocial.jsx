@@ -14,7 +14,7 @@ const MovieSocial = ({ movie }) => {
         style={{ color: `var(--color-light-slate-gray)` }}
       />
       <span>{movie?.popularity}</span>
-      <span className='adult'>{movie?.adult ? 'over 18' : 'under 18'}</span>
+      <span className='adult'>{movie?.adult ? '18+' : 'ALL'}</span>
     </div>
   );
 };
