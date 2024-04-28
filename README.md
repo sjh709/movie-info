@@ -29,110 +29,110 @@
 ## 🗂️ 프로젝트 구조
 
 ```
-📦src
- ┣ 📂common
- ┃ ┣ 📂LoadingSpinner
- ┃ ┃ ┣ 📜LoadingSpinner.jsx
- ┃ ┃ ┗ 📜LoadingSpinner.style.css
- ┃ ┣ 📂MovieCard
- ┃ ┃ ┣ 📜MovieCard.jsx
- ┃ ┃ ┗ 📜MovieCard.style.css
- ┃ ┣ 📂MovieSlider
- ┃ ┃ ┣ 📜MovieSlider.jsx
- ┃ ┃ ┗ 📜MovieSlider.style.css
- ┃ ┗ 📂MovieSocial
- ┃ ┃ ┣ 📜MovieSocial.jsx
- ┃ ┃ ┗ 📜MovieSocial.style.css
- ┣ 📂constants
- ┃ ┗ 📜responsive.js
- ┣ 📂hooks
- ┃ ┣ 📜useMovieDetail.js
- ┃ ┣ 📜useMovieDetailCredits.js
- ┃ ┣ 📜useMovieGenre.js
- ┃ ┣ 📜useMovieReview.js
- ┃ ┣ 📜useMovieTrailer.js
- ┃ ┣ 📜usePopularMovies.js
- ┃ ┣ 📜useRelatedMovies.js
- ┃ ┣ 📜useSearchMovie.js
- ┃ ┣ 📜useTopRatedMovies.js
- ┃ ┗ 📜useUpcomingMovies.js
- ┣ 📂layout
- ┃ ┗ 📜AppLayout.jsx
- ┣ 📂pages
- ┃ ┣ 📂Homepage
- ┃ ┃ ┣ 📂components
- ┃ ┃ ┃ ┣ 📂Banner
- ┃ ┃ ┃ ┃ ┣ 📜Banner.jsx
- ┃ ┃ ┃ ┃ ┗ 📜Banner.style.css
- ┃ ┃ ┃ ┣ 📂PopularMovieSlide
- ┃ ┃ ┃ ┃ ┗ 📜PopularMovieSlide.jsx
- ┃ ┃ ┃ ┣ 📂TopRatedMovieSlide
- ┃ ┃ ┃ ┃ ┗ 📜TopRatedMovieSlide.jsx
- ┃ ┃ ┃ ┗ 📂UpcomingMovieSlide
- ┃ ┃ ┃ ┃ ┗ 📜UpcomingMovieSlide.jsx
- ┃ ┃ ┗ 📜Homepage.jsx
- ┃ ┣ 📂MovieDetail
- ┃ ┃ ┣ 📂components
- ┃ ┃ ┃ ┣ 📂CreditsCard
- ┃ ┃ ┃ ┃ ┣ 📜CreditsCard.jsx
- ┃ ┃ ┃ ┃ ┗ 📜CreditsCard.style.css
- ┃ ┃ ┃ ┣ 📂Line
- ┃ ┃ ┃ ┃ ┣ 📜Line.jsx
- ┃ ┃ ┃ ┃ ┗ 📜Line.style.css
- ┃ ┃ ┃ ┣ 📂MovieDetailCredits
- ┃ ┃ ┃ ┃ ┣ 📜MovieDetailCredits.jsx
- ┃ ┃ ┃ ┃ ┗ 📜MovieDetailCredits.style.css
- ┃ ┃ ┃ ┣ 📂MovieDetailInfo
- ┃ ┃ ┃ ┃ ┣ 📜MovieDetailInfo.jsx
- ┃ ┃ ┃ ┃ ┗ 📜MovieDetailInfo.style.css
- ┃ ┃ ┃ ┣ 📂MovieDetailMoreInfo
- ┃ ┃ ┃ ┃ ┣ 📜MovieDetailMoreInfo.jsx
- ┃ ┃ ┃ ┃ ┗ 📜MovieDetailMoreInfo.style.css
- ┃ ┃ ┃ ┣ 📂RelatedMoviesBox
- ┃ ┃ ┃ ┃ ┣ 📜RelatedMoviesBox.jsx
- ┃ ┃ ┃ ┃ ┗ 📜RelatedMoviesBox.style.css
- ┃ ┃ ┃ ┣ 📂Review
- ┃ ┃ ┃ ┃ ┣ 📜Review.jsx
- ┃ ┃ ┃ ┃ ┗ 📜Review.style.css
- ┃ ┃ ┃ ┗ 📂ReviewBox
- ┃ ┃ ┃ ┃ ┣ 📜ReviewBox.jsx
- ┃ ┃ ┃ ┃ ┗ 📜ReviewBox.style.css
- ┃ ┃ ┣ 📜MovieDetailPage.jsx
- ┃ ┃ ┗ 📜MovieDetailPage.style.css
- ┃ ┣ 📂Movies
- ┃ ┃ ┣ 📂components
- ┃ ┃ ┃ ┣ 📂FilterSection
- ┃ ┃ ┃ ┃ ┣ 📜FilterSection.jsx
- ┃ ┃ ┃ ┃ ┗ 📜FilterSection.style.css
- ┃ ┃ ┃ ┣ 📂GenreFilter
- ┃ ┃ ┃ ┃ ┣ 📜GenreFilter.jsx
- ┃ ┃ ┃ ┃ ┗ 📜GenreFilter.style.css
- ┃ ┃ ┃ ┣ 📂MovieCardDetail
- ┃ ┃ ┃ ┃ ┣ 📜MovieCardDetail.jsx
- ┃ ┃ ┃ ┃ ┗ 📜MovieCardDetail.style.css
- ┃ ┃ ┃ ┣ 📂SideBar
- ┃ ┃ ┃ ┃ ┣ 📜SideBar.jsx
- ┃ ┃ ┃ ┃ ┗ 📜SideBar.style.css
- ┃ ┃ ┃ ┣ 📂SortSection
- ┃ ┃ ┃ ┃ ┣ 📜SortSection.jsx
- ┃ ┃ ┃ ┃ ┗ 📜SortSection.style.css
- ┃ ┃ ┃ ┗ 📂YearFilter
- ┃ ┃ ┃ ┃ ┣ 📜YearFilter.jsx
- ┃ ┃ ┃ ┃ ┗ 📜YearFilter.style.css
- ┃ ┃ ┗ 📜MoviePage.jsx
- ┃ ┗ 📂NotFoundpage
- ┃ ┃ ┣ 📜NotFoundPage.jsx
- ┃ ┃ ┗ 📜NotFoundPage.style.css
- ┣ 📂utils
- ┃ ┗ 📜api.js
- ┣ 📜App.css
- ┣ 📜App.js
- ┣ 📜App.test.js
- ┣ 📜index.css
- ┣ 📜index.js
- ┣ 📜logo.svg
- ┣ 📜reportWebVitals.js
- ┗ 📜setupTests.js
+src
+├── App.css
+├── App.js
+├── App.test.js
+├── common
+│   ├── LoadingSpinner
+│   │   ├── LoadingSpinner.jsx
+│   │   └── LoadingSpinner.style.css
+│   ├── MovieCard
+│   │   ├── MovieCard.jsx
+│   │   └── MovieCard.style.css
+│   ├── MovieSlider
+│   │   ├── MovieSlider.jsx
+│   │   └── MovieSlider.style.css
+│   └── MovieSocial
+│       ├── MovieSocial.jsx
+│       └── MovieSocial.style.css
+├── constants
+│   └── responsive.js
+├── hooks
+│   ├── useMovieDetail.js
+│   ├── useMovieDetailCredits.js
+│   ├── useMovieGenre.js
+│   ├── useMovieReview.js
+│   ├── useMovieTrailer.js
+│   ├── usePopularMovies.js
+│   ├── useRelatedMovies.js
+│   ├── useSearchMovie.js
+│   ├── useTopRatedMovies.js
+│   └── useUpcomingMovies.js
+├── index.css
+├── index.js
+├── layout
+│   └── AppLayout.jsx
+├── logo.svg
+├── pages
+│   ├── Homepage
+│   │   ├── Homepage.jsx
+│   │   └── components
+│   │       ├── Banner
+│   │       │   ├── Banner.jsx
+│   │       │   └── Banner.style.css
+│   │       ├── PopularMovieSlide
+│   │       │   └── PopularMovieSlide.jsx
+│   │       ├── TopRatedMovieSlide
+│   │       │   └── TopRatedMovieSlide.jsx
+│   │       └── UpcomingMovieSlide
+│   │           └── UpcomingMovieSlide.jsx
+│   ├── MovieDetail
+│   │   ├── MovieDetailPage.jsx
+│   │   ├── MovieDetailPage.style.css
+│   │   └── components
+│   │       ├── CreditsCard
+│   │       │   ├── CreditsCard.jsx
+│   │       │   └── CreditsCard.style.css
+│   │       ├── Line
+│   │       │   ├── Line.jsx
+│   │       │   └── Line.style.css
+│   │       ├── MovieDetailCredits
+│   │       │   ├── MovieDetailCredits.jsx
+│   │       │   └── MovieDetailCredits.style.css
+│   │       ├── MovieDetailInfo
+│   │       │   ├── MovieDetailInfo.jsx
+│   │       │   └── MovieDetailInfo.style.css
+│   │       ├── MovieDetailMoreInfo
+│   │       │   ├── MovieDetailMoreInfo.jsx
+│   │       │   └── MovieDetailMoreInfo.style.css
+│   │       ├── RelatedMoviesBox
+│   │       │   ├── RelatedMoviesBox.jsx
+│   │       │   └── RelatedMoviesBox.style.css
+│   │       ├── Review
+│   │       │   ├── Review.jsx
+│   │       │   └── Review.style.css
+│   │       └── ReviewBox
+│   │           ├── ReviewBox.jsx
+│   │           └── ReviewBox.style.css
+│   ├── Movies
+│   │   ├── MoviePage.jsx
+│   │   └── components
+│   │       ├── FilterSection
+│   │       │   ├── FilterSection.jsx
+│   │       │   └── FilterSection.style.css
+│   │       ├── GenreFilter
+│   │       │   ├── GenreFilter.jsx
+│   │       │   └── GenreFilter.style.css
+│   │       ├── MovieCardDetail
+│   │       │   ├── MovieCardDetail.jsx
+│   │       │   └── MovieCardDetail.style.css
+│   │       ├── SideBar
+│   │       │   ├── SideBar.jsx
+│   │       │   └── SideBar.style.css
+│   │       ├── SortSection
+│   │       │   ├── SortSection.jsx
+│   │       │   └── SortSection.style.css
+│   │       └── YearFilter
+│   │           ├── YearFilter.jsx
+│   │           └── YearFilter.style.css
+│   └── NotFoundpage
+│       ├── NotFoundPage.jsx
+│       └── NotFoundPage.style.css
+├── reportWebVitals.js
+├── setupTests.js
+└── utils
+    └── api.js
 ```
 
 <br>
