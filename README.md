@@ -1,5 +1,7 @@
 # 🎬 영화 정보 검색 사이트 (movie-info)
 
+![movie-info](https://github.com/sjh709/movie-info/assets/42454759/7f3cf0a7-20e7-4d12-91e1-23143178783e)
+
 - 배포 URL : https://s2-movie-app.netlify.app/
 
 <br>
