@@ -186,11 +186,11 @@ src
 #### 📱 모바일
 |영화페이지|검색|페이지네이션|
 |------|------|------|
-|![영화페이지-모바일](https://github.com/sjh709/movie-info/assets/42454759/f3ea04e1-906a-4de3-9d51-4a7665f7578e)|이미지|이미지|
+|![영화페이지-모바일](https://github.com/sjh709/movie-info/assets/42454759/f3ea04e1-906a-4de3-9d51-4a7665f7578e)|![검색-모바일](https://github.com/sjh709/movie-info/assets/42454759/dca413ee-7be3-4665-a553-fe7a3de86829)|![페이지네이션-모바일](https://github.com/sjh709/movie-info/assets/42454759/8d950a76-3b37-4535-84c0-0726c74f31d4)|
 
 |정렬|필터|카드 클릭|
 |------|------|------|
-|이미지|이미지|이미지|
+|![정렬-모바일](https://github.com/sjh709/movie-info/assets/42454759/ac86d20b-4b55-48ca-863c-2b7efb3d190a)|![필터-모바일](https://github.com/sjh709/movie-info/assets/42454759/f0fc89fb-01ee-4b8e-8fdb-10c4bede79f3)|![카드클릭-모바일](https://github.com/sjh709/movie-info/assets/42454759/bd60cec5-4102-4387-b460-95ea80699dab)|
 
 <br>
 
