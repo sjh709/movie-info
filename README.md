@@ -175,7 +175,7 @@ src
 - 영화 카드를 클릭하면 영화 상세페이지로 이동합니다.
 
 #### 🖥️ PC
-|영화페이지|검색|페이지네이션|
+|영화 페이지|검색|페이지 네이션|
 |------|------|------|
 |![영화페이지-pc](https://github.com/sjh709/movie-info/assets/42454759/a212f65e-1ea9-408f-86f0-8f2dfaed8d12)|![검색-pc](https://github.com/sjh709/movie-info/assets/42454759/f67ca5b8-8688-4e4a-9e86-90681c63abe5)|![페이지네이션-pc](https://github.com/sjh709/movie-info/assets/42454759/7e084d8e-41c0-4e60-8818-f3153ac7f45b)|
 
@@ -184,7 +184,7 @@ src
 |![정렬-pc](https://github.com/sjh709/movie-info/assets/42454759/b945bb57-401e-443a-8d30-12c3d70e1331)|![필터-pc](https://github.com/sjh709/movie-info/assets/42454759/61c91f3b-db20-465c-9e63-7f53d6896ee6)|![카드클릭-pc](https://github.com/sjh709/movie-info/assets/42454759/b4f72772-3c5f-489d-91f1-aa796a93fdc3)|
 
 #### 📱 모바일
-|영화페이지|검색|페이지네이션|
+|영화 페이지|검색|페이지 네이션|
 |------|------|------|
 |![영화페이지-모바일](https://github.com/sjh709/movie-info/assets/42454759/f3ea04e1-906a-4de3-9d51-4a7665f7578e)|![검색-모바일](https://github.com/sjh709/movie-info/assets/42454759/dca413ee-7be3-4665-a553-fe7a3de86829)|![페이지네이션-모바일](https://github.com/sjh709/movie-info/assets/42454759/8d950a76-3b37-4535-84c0-0726c74f31d4)|
 
@@ -202,20 +202,20 @@ src
 - 관련된 영화를 클릭하면 해당 영화의 상세페이지로 이동합니다.
 
 #### 🖥️ PC
-|영화상세페이지|예고편|
+|영화 상세 페이지|예고편|
 |------|------|
 |![영화상세페이지-pc](https://github.com/sjh709/movie-info/assets/42454759/6c20f332-f3e2-481a-8e41-58f260fa7ac1)|![예고편-pc](https://github.com/sjh709/movie-info/assets/42454759/dd5f439f-823f-4d0f-a1f8-b1780be2bd55)|
 
-|리뷰|관련영화|관련영화클릭|
+|리뷰|관련 영화|관련 영화 클릭|
 |------|------|------|
 |![리뷰-pc](https://github.com/sjh709/movie-info/assets/42454759/7dabff8a-a9a6-4a75-b245-0832fabd7ef1)|![관련영화-pc](https://github.com/sjh709/movie-info/assets/42454759/aab6f8f8-70e3-4ac9-b983-48a24c31532b)|![관련영화클릭-pc](https://github.com/sjh709/movie-info/assets/42454759/8c47f77b-37ac-4212-9cba-8d3e27eea239)|
 
 #### 📱 모바일
-|영화상세페이지|예고편|리뷰|
+|영화 상세 페이지|예고편|리뷰|
 |------|------|------|
 |![영화상세페이지-모바일](https://github.com/sjh709/movie-info/assets/42454759/7a8c785c-beea-4e2c-8766-a15df4cd4bb0)|![예고편-모바일](https://github.com/sjh709/movie-info/assets/42454759/95775eaa-ea53-406a-93d2-310e40ae02fa)|![리뷰-모바일](https://github.com/sjh709/movie-info/assets/42454759/c6dc75cf-5a51-4398-9594-06c61367ea1a)|
 
-|관련영화|관련영화클릭|
+|관련 영화|관련 영화 클릭|
 |------|------|
 |![관련영화-모바일](https://github.com/sjh709/movie-info/assets/42454759/8dde93d6-3b8a-468c-a417-d3ef70ac92e0)|![관련영화클릭-모바일](https://github.com/sjh709/movie-info/assets/42454759/99bb43cf-3331-4308-b1bf-0d800a368336)|
 
