@@ -14,12 +14,17 @@
 
 <br>
 
+## 🌱 개발 인원
+1명
+
+<br>
+
 ## ⏰ 개발 기간
 24.04.02 ~ 24.04.13 (12일)
 
 <br>
 
-## ⚙️ 개발 환경
+## ⚙️ Stack
 
 - Front-end : HTML, CSS, JavaScript, React, React Router, React Bootstrap, Axios, React Query
 - Back-end : TMDB api 활용
